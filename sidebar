@@ -1,0 +1,80 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!-- Expandable Vertical Sidebar -->
+<aside id="default-sidebar" class="group fixed top-0 left-0 z-40 w-20 hover:w-64 h-screen bg-white dark:bg-gray-800 shadow-md transition-[width] duration-75 font-montserrat" aria-label="Sidebar">
+  <div class="h-full px-3 py-4 overflow-hidden text-consistent text-yinmn-blue flex flex-col items-center">
+    <!-- Profile Section -->
+    <a href="#" class="flex items-center mb-10 mt-20 group-hover:justify-start justify-center w-full hover:bg-gray-100">
+      <img src="resources/img/icon.jpg" alt="Profile Picture" class="w-16 h-16 rounded-full min-w-[4rem] flex-shrink-0 border-2 border-gray-300 transition-transform duration-150">
+      <div class="ms-4 hidden group-hover:flex flex-col">
+        <p class="text-consistent dark:text-white">Profile</p>
+        <span class="mt-1 py-0.5 text-sm italic text-office-green dark:text-green-400">Ongoing</span>
+      </div>
+    </a>
+    
+    <ul class="space-y-2 mt-2 ml-3 font-normal w-full">
+      <!-- Dashboard -->
+      <li>
+        <a href="#" class="flex items-center p-2 rounded-lg text-consistent dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:block text-yinmn-blue">Dashboard</span>
+        </a>
+      </li>
+
+      <!-- Intern Leave -->
+      <li>
+        <button type="button" class="flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-leave" data-collapse-toggle="dropdown-leave">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:block">Intern Leave</span>
+        </button>
+
+        <!-- Submenu -->
+        <ul id="dropdown-leave" class="hidden py-2 space-y-2">
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Apply Leave</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Leave Status</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Report -->  
+      <li>
+        <button type="button" class="flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-report" data-collapse-toggle="dropdown-report">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:inline-block">Report</span>
+        </button>
+
+        <!-- Submenu -->
+        <ul id="dropdown-report" class="hidden py-2 space-y-2">
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Send Report</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Report Status</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Developers -->
+      <li>
+        <a href="#" class="flex items-center p-2 text-consistent rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" width="24" height="24" fill="currentColor" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+          </svg>
+          <span class="ms-3 hidden group-hover:inline-block">Developers</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

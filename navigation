@@ -1,0 +1,213 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="bg-white dark:bg-dark-columbia-blue fixed top-0 left-0 w-full z-50 flex items-center p-2">
+<!-- drawer init and show -->
+  <div class="text-center ml-2 md:ml-16 mt-4">
+    <button class="hover:bg-gray-200 font-medium rounded-lg text-sm px-3 py-2.5" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+      <svg class="w-5 h-5 text-yinmn-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- drawer component -->
+  <div id="drawer-navigation" class="fixed top-0 left-0 z-40 w-64 h-screen p-4 transition-transform -translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+      <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-yinmn-blue bg-transparent hover:bg-gray-200 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
+          <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Close menu</span>
+      </button>
+    <div class="py-4">
+        <ul class="font-montserrat space-y-2 font-medium">
+          <li>
+          <a href="#" class="flex items-center mb-10 mt-20 justify-center w-full hover:bg-gray-100">
+            <img src="{{asset('images/Ellipse.png')}}" alt="Profile Picture" class="w-16 h-16 rounded-full min-w-[4rem] flex-shrink-0 border-2 border-gray-300 transition-transform duration-150">
+            <div class="ms-4 flex-col">
+              <p class="text-consistent text-yinmn-blue">Profile</p>
+              <span class="mt-1 py-0.5 text-sm italic text-office-green">Ongoing</span>
+            </div>
+          </a>
+          </li>
+          <li>
+          <a href="#" class="flex items-center p-2 rounded-lg text-consistent dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <svg class="w-6 h-6 text-yinmn-blue dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="ms-3 text-yinmn-blue">Dashboard</span>
+          </a>
+          </li>
+          <li>
+            <button type="button" class="text-yinmn-blue flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-leave-drawer" data-collapse-toggle="dropdown-leave-drawer">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+            </svg>
+            <span class="ms-3 ">Intern Leave</span>
+            </button>
+            <ul id="dropdown-leave-drawer" class="hidden py-2 space-y-2">
+            <li>
+              <a href="#" class="text-yinmn-blue flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Apply Leave</a>
+            </li>
+            <li>
+              <a href="#" class="text-yinmn-blue flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Leave Status</a>
+            </li>
+            </ul>
+          </li>
+          <li>
+        <button type="button" class="text-yinmn-blue flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-report-drawer" data-collapse-toggle="dropdown-report-drawer">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="ms-3">Report</span>
+        </button>
+
+        <!-- Submenu -->
+        <ul id="dropdown-report-drawer" class="text-yinmn-blue hidden py-2 space-y-2">
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Send Report</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-2 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Report Status</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="text-yinmn-blue flex items-center p-2 text-consistent rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" width="24" height="24" fill="currentColor" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+          </svg>
+          <span class="ms-3">Developers</span>
+        </a>
+      </li>
+        </ul>
+    </div>
+  </div>
+    
+    <div class="flex w-full items-center justify-between ml-5">
+        <div class="flex-shrink-0 mr-4 ml-4 mt-2">
+            <a href="#" class="flex items-center text-medium text-white bg-yinmn-blue text-medium font-montserrat font-semibold rounded-md px-4 py-4 md:h-16 md:w-auto">
+            <svg class="w-6 h-6 text-white dark:text-dark-columbia-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M10 2a3 3 0 0 0-3 3v1H5a3 3 0 0 0-3 3v2.382l1.447.723.005.003.027.013.12.056c.108.05.272.123.486.212.429.177 1.056.416 1.834.655C7.481 13.524 9.63 14 12 14c2.372 0 4.52-.475 6.08-.956.78-.24 1.406-.478 1.835-.655a14.028 14.028 0 0 0 .606-.268l.027-.013.005-.002L22 11.381V9a3 3 0 0 0-3-3h-2V5a3 3 0 0 0-3-3h-4Zm5 4V5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1h6Zm6.447 7.894.553-.276V19a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-5.382l.553.276.002.002.004.002.013.006.041.02.151.07c.13.06.318.144.557.242.478.198 1.163.46 2.01.72C7.019 15.476 9.37 16 12 16c2.628 0 4.98-.525 6.67-1.044a22.95 22.95 0 0 0 2.01-.72 15.994 15.994 0 0 0 .707-.312l.041-.02.013-.006.004-.002.001-.001-.431-.866.432.865ZM12 10a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="hidden md:inline ml-8">
+                ATTENDANCE</span>
+            </a>
+        </div>
+
+        <div class="flex items-center justify-center flex-grow mt-2">
+            <img src="{{ asset('images/uip logo.png') }}" alt="UIP Logo" class="h-14 w-16 md:h-14 md:w-16">
+            <span class="text-xl md:text-3xl font-montserrat font-bold whitespace-nowrap text-dark-columbia-blue dark:text-white hidden md:inline ml-2">
+                UIP TRACKER
+            </span>
+        </div>
+
+        <div class="flex-shrink-0 flex items-center space-x-2 md:space-x-4 mt-2">
+            <div class="relative">
+            <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" 
+                class="text-dark-columbia-blue font-montserrat font-xs px-2 flex items-center">
+                <img src="{{asset('images/Ellipse.png')}}" alt="Profile Picture" class="h-16 w-16 md:h-16 md:w-16 rounded-full mr-2">
+                <span class="hidden md:inline">John Steven Smith</span>
+                <svg class="w-6 h-6 ml-2 mr-8 md:h-5 md:w-5 text-dark-columbia-blue dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class=" font-montserrat hidden w-56 shadow-lg bg-white rounded-lg p-2 right-0 top-full">
+                <div class="flex justify-between items-center ml-10 mr-4">
+                    <label class="inline-flex items-center mb-5 cursor-pointer">
+                      <input type="checkbox" value="" class="sr-only peer">
+                      <span class="text-md text-yinmn-blue">Mode</span>
+                      <div class="ml-7 relative w-12 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-columbia-blue dark:peer-focus:ring-dark-columbia-blue rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yinmn-blue"></div>
+                    </label>
+
+                </div>
+                <div class="flex items-center gap-2 mb-2 ml-10">
+                    <a href="#" class="py-1 w-full rounded-lg text-md hover:text-columbia-blue text-yinmn-blue">Change Password</a>
+                </div>
+                <div class="flex items-center gap-2 mb-2  ml-20">
+                    <a href="#" class="py-1 w-full rounded-lg text-md hover:text-columbia-blue text-yinmn-blue">Log Out</a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+  
+<!-- Expandable Vertical Sidebar -->
+<aside id="default-sidebar" class="mt-12 group fixed top-0 left-0 z-40 w-20 hover:w-64 h-screen bg-white dark:bg-gray-800 transition-[width] duration-75 font-montserrat" aria-label="Sidebar">
+  <div class="h-full px-3 py-4 overflow-hidden text-consistent text-yinmn-blue flex flex-col items-center">
+    <!-- Profile Section -->
+    <a href="#" class="flex items-center mb-10 mt-20 group-hover:justify-start justify-center w-full hover:bg-gray-100">
+      <img src="{{asset('images/Ellipse.png')}}" alt="Profile Picture" class="w-16 h-16 rounded-full min-w-[4rem] flex-shrink-0 border-2 border-gray-300 transition-transform duration-150">
+      <div class="ms-4 hidden group-hover:flex flex-col">
+        <p class="text-consistent dark:text-white">Profile</p>
+        <span class="mt-1 py-0.5 text-sm italic text-office-green dark:text-green-400">Ongoing</span>
+      </div>
+    </a>
+    
+    <ul class="space-y-2 mt-2 ml-3 font-normal w-full">
+      <!-- Dashboard -->
+      <li>
+        <a href="#" class="flex items-center p-2 rounded-lg text-consistent dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:block text-yinmn-blue">Dashboard</span>
+        </a>
+      </li>
+
+      <!-- Intern Leave -->
+      <li>
+        <button type="button" class="flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-leave" data-collapse-toggle="dropdown-leave">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:block">Intern Leave</span>
+        </button>
+
+        <!-- Submenu -->
+        <ul id="dropdown-leave" class="hidden py-2 space-y-2">
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Apply Leave</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Leave Status</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Report -->  
+      <li>
+        <button type="button" class="flex items-center w-full p-2 text-base text-consistent transition duration-75 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 group" aria-controls="dropdown-report" data-collapse-toggle="dropdown-report">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="ms-3 hidden group-hover:inline-block">Report</span>
+        </button>
+
+        <!-- Submenu -->
+        <ul id="dropdown-report" class="hidden py-2 space-y-2">
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Send Report</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center w-full p-2 text-consistent transition duration-75 rounded-lg pl-11 ml-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Report Status</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Developers -->
+      <li>
+        <a href="#" class="flex items-center p-2 text-consistent rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg class="w-6 h-6 dark:text-white" aria-hidden="true" width="24" height="24" fill="currentColor" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+          </svg>
+          <span class="ms-3 hidden group-hover:inline-block">Developers</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+</body>
